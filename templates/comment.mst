@@ -1,0 +1,16 @@
+    <h2>Comments</h2>
+
+    {{#comments}}
+
+        <div class="comment">
+
+            <p>Author: {{author}}</p>
+            <hr>
+            <p>Created on: {{dateCreated}}</p>
+            <p>Updated on: {{lastUpdated}}<p>
+            <p>Comment: {{text}}</p>
+
+        </div>
+
+    {{/comments}}
+

@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    vertical-align: baseline;
+    font-size: 100%;
+}
+
+html{
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    width: 100%;
+    background: whitesmoke;
+}
+
+.front-logo{
+    width: 300px;
+    padding: 0 0 180px 0;
+    margin-top: -70px;
+    margin-right: 120px;
+}
+
+h1{
+    color: black;
+    font-size: 48px;
+}
+
+p{
+    color: black;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.first-section{
+    background-color: #821625;
+}
+
+.head1{
+    background: url("../img/trees_fog.jpg");
+    margin: 100px 0 280px 120px;
+    z-index: 3;
+}
+
+.head1 p{
+    width: 60%;
+    margin-top: 10px;
+}
+
+.recent{
+    text-align: center;
+    width: 100%;
+}
+
+.recent img{
+    margin: 1%;
+    width: 45%;
+}
+
+.head2{
+    margin: 150px 0 100px 120px;
+}
+
+.first-section h1{
+    padding-top: 50px;
+    color: whitesmoke;
+}
+
+.first-section p{
+    color: whitesmoke;
+}
+
+.head2 p{
+    width: 60%;
+    margin-top: 10px;
+}
+
+.others{
+    text-align: center;
+    width: 100%;
+}
+
+.others img{
+    margin: 1%;
+    width: 45%;
+}
+
+.copyright{
+    padding-top: 20px;
+    color: white;
+}
+
+.copyright p{
+    color: white;
+}
+
+@media only screen and (max-width: 991px)
+{
+    .head1{
+        text-align: left;
+        margin: 100px 0 100px 30px;
+    }
+
+    .head1 h1{
+        font-size: 36px;
+    }
+
+    .head1 p{
+        font-size: 16px;
+        width: 90%;
+    }
+
+    .front-logo{
+        width: 200px;
+    }
+
+    .recent img{
+        margin: 2%;
+        width: 90%;
+    }
+
+    .head2{
+        margin: 130px 0 40px 12px;
+    }
+
+    .head2 h1{
+        font-size: 36px;
+    }
+
+    .head2 p{
+        font-size: 16px;
+        width: 90%;
+    }
+
+    .others img{
+        margin: 2%;
+        width: 90%;
+    }
+
+    .front-image
+    {
+        display: block;
+        position: absolute;
+    }
+
+    .front-text{
+        display: block;
+        position: absolute;
+    }
+
+}

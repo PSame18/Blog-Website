@@ -1,0 +1,158 @@
+body, html{
+    height: 100%;
+    margin: 0;
+}
+
+.sidebar{
+    z-index: -1;
+    margin-bottom: 60px;
+}
+
+.side{
+    padding: 30px;
+    margin: 30px 10px 0 30px;
+    background-color: grey;
+    height: 100%;
+}
+
+.quote{
+    padding-bottom: 50px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+}
+
+header{
+    height: 70px;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+footer{
+    height: 120px;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+article{
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.article-info{
+    margin-top: 8px;
+    margin-bottom: 25px;
+}
+
+.article-info time{
+    margin-right: 20px;
+    font-size: 22px;
+}
+
+.author-mail{
+    font-size: 22px;
+}
+
+h2{
+    text-align: left;
+    font-size: 27px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+p{
+    font-size: 20px;
+    margin-bottom: 45px;
+}
+
+.text{
+    padding: 15px 60px;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 600px){
+    div.text{
+        padding: 25px;
+    }
+    div.article-info{
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (min-width: 300px) and (max-width: 700px){
+    h2{
+        font-size: 24px;
+    }
+    p{
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (max-width: 100px){
+    h2{
+        font-size: 20px;
+    }
+    p{
+        font-size: 12px;
+    }
+
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.article-info{
+    display: flex;
+    font-size: 16px;
+}
+
+.canvas{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    width: fit-content;
+    left: 45%;
+}
+
+#canvas{
+}
+
+.copyright{
+    padding-top: 20px;
+    color: white;
+}
+
+.image{
+    margin: 10px 0;
+    opacity: 0.8;
+}
+
+.parallax{
+    background-attachment: fixed;
+}
+
+.list{
+    display: inline-block;
+    background-color: grey;
+    padding: 30px;
+    margin: 30px 15px 30px 0;
+    border-color: #151515;
+    border-radius: 8px;
+    color: white;
+}
+
+.list ol{
+    list-style-type: disc;
+}
+
+.font-color{
+    color: #821625;
+}

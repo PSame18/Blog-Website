@@ -1,0 +1,29 @@
+hr{
+    border: 3px solid black;
+}
+
+form{
+    display: inline-block;
+    width: 100%;
+}
+
+legend{
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+fieldset{
+    margin: 20px;
+}
+
+fieldset div{
+    margin: 20px;
+}
+
+input{
+    margin-left: 10px;
+}
+
+textarea{
+    margin-left: 10px;
+}

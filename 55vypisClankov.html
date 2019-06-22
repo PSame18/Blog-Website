@@ -1,0 +1,230 @@
+<!--* vypisClankov means list articles-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zoznam článkov / Article List</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/grid.css">
+    <link rel="stylesheet" type="text/css" href="styles/articlesList.css">
+    <link rel="stylesheet" type="text/css" href="styles/-debug.css">
+
+    <link rel="stylesheet" href="styles/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet"> <!-- font-family: 'Lato', sans-serif; -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+
+    <script src="js/loadEvent.js"></script>
+    <script src="js/55ziskajClanky.js"></script>
+    <script src="js/form.js"></script>
+
+</head>
+<body>
+<header>
+
+    <div class="heading">
+        <h1 id="heading">Zoznam článkov / Article List</h1>
+    </div>
+
+    <div class="menu">
+
+        <button id="menu12" onclick="menu()">
+            Ponuka clankov
+        </button>
+
+        <nav id="menu1" class="menu hidden">
+            <a href="#" onclick="document.getElementById('btn2').click()">Predchádzajúce / Previous</a>
+            <a href="#" onclick="document.getElementById('btn3').click()">Nasledujúce / Next</a>
+            <a href="#" onclick="document.getElementById('lw-btn').click()">Change mode</a>
+        </nav>
+
+    </div>
+
+</header>
+
+    <div class="box">
+        <main id="clanky"></main>
+    </div>
+
+    <div class="box">
+        <button id="lw-btn" class="normal" onclick="toggleBtn()">Change mode</button>
+    </div>
+
+    <div class="box">
+        <nav id="navigacia"></nav>
+    </div>
+
+<footer>
+
+    <form class="box" onsubmit="findArticle()" id="form">
+
+        <h2>Find articles</h2>
+
+        <fieldset>
+
+            <div class="filter title">
+                <label for="title">Title</label>
+                <input type="text" id="title">
+            </div>
+
+            <div class="filter author">
+                <label for="author">Author</label>
+                <input type="text" id="author">
+            </div>
+
+            <div class="filter tag">
+                <label for="tag">Tags</label>
+                <input type="text" id="tag">
+            </div>
+
+            <div class="filter fromDate">
+                <label for="fromDate">Created on (from)</label>
+                <input type="text" id="fromDate">
+            </div>
+
+            <div class="filter toDate">
+                <label for="toDate">Created on (to)</label>
+                <input type="text" id="toDate">
+            </div>
+
+            <div class="filter updatedFromDate">
+                <label for="updatedFromDate">Created on (from)</label>
+                <input type="text" id="updatedFromDate">
+            </div>
+
+            <div class="filter updatedToDate">
+                <label for="updatedToDate">Created on (from)</label>
+                <input type="text" id="updatedToDate">
+            </div>
+
+            <div class="filter content">
+                <label for="content">Content</label>
+                <input type="text" id="content">
+            </div>
+
+        </fieldset>
+
+        <div class="submit">
+            <input type="submit" id="submit">
+        </div>
+
+    </form>
+
+</footer>
+
+<script>
+
+    function toggleBtn() {
+        if(document.getElementById('lw-btn').classList.contains('normal'))
+        {
+            document.getElementById('lw-btn').classList.replace('normal', 'lwpeople');
+        }
+        else
+        {
+            document.getElementById('lw-btn').classList.replace('lwpeople', 'normal');
+        }
+
+
+        if(document.getElementById("lw-btn").classList.contains('normal'))
+        {
+            document.getElementById('clanky').style.fontSize = "20px";
+            document.getElementById('navigacia').style.fontSize = "18px";
+
+            document.getElementById('clanky').style.backgroundColor = "white";
+            document.getElementById('navigacia').style.backgroundColor = "white";
+            document.getElementById('clanky').style.color = "black";
+            document.getElementById('navigacia').style.color = "black";
+            document.body.style.backgroundColor = "white";
+
+            document.getElementById('form').style.color = "black";
+            document.getElementById('form').style.backgroundColor = "white";
+            document.getElementById('form').style.fontSize = "100%";
+        }
+        else
+        {
+            document.getElementById('clanky').style.fontSize = "40px";
+            document.getElementById('navigacia').style.fontSize = "25px";
+
+            document.getElementById('clanky').style.backgroundColor = "black";
+            document.getElementById('navigacia').style.backgroundColor = "black";
+            document.getElementById('clanky').style.color = "white";
+            document.getElementById('navigacia').style.color = "white";
+            document.body.style.backgroundColor = "black";
+
+            document.getElementById('form').style.color = "white";
+            document.getElementById('form').style.backgroundColor = "black";
+            document.getElementById('form').style.fontSize = "120%";
+        }
+    }
+    
+    function menu(){
+        document.getElementById("menu1").classList.toggle("shown");
+    }
+
+    function hideMenu()
+    {
+        var list = document.getElementById("menu1").classList;
+        if(list.contains("shown"))
+        {
+            list.remove("shown")
+        }
+
+        document.addEventListener("click", function (udalost)
+        {
+            if(!udalost.target.matches("#menu1, #menu12"))
+            {
+                hideMenu();
+            }
+        });
+
+        document.addEventListener("click", function (udalost)
+        {
+            console.log(udalost.target);
+        });
+    }
+
+
+</script>
+
+<!----------------------------- Mustache template -------------------------------------------------------------------->
+
+<script id="listOfArticlesMTemplate" type="text/template">
+
+    {{#articles}}
+
+    <hr>
+
+    <article>
+        <h2>Title: <a href="55article.html?id={{id}}">{{title}}</a></h2>
+        <p>Author: {{author}}</p>
+        <p>Date: {{dateCreated}}</p>
+    </article>
+
+    <hr>
+
+    {{/articles}}
+
+</script>
+
+<!----------------------------- JavaScript ---------------------------------------------------------------------------->
+
+<!-------------------------------------------->
+<!--Spolocne / Common -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+<script>window.Mustache || document.write('<script src="js/mustache.min.js"><\/script>')</script>
+
+<script src="js/mustacheRenderer.js"></script>
+<!--script src="js/ajajCallsVanilla.js"></script-->
+<!--script src="js/55articleListVanilla.js"></script-->
+
+
+</body>
+</html>

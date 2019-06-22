@@ -1,0 +1,32 @@
+.table{
+    padding: 40px 0 40px 0;
+    overflow-x: auto;
+}
+
+table {
+    width:100%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    caption-side: top;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#t01 th {
+    background-color: grey;
+    color: white;
+}
+
+.checked
+{
+    color: orange;
+}

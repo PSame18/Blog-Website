@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+.box{
+    margin: 80px;
+}
+
+header{
+    height: 200px;
+    padding: 80px;
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../img/notebook-2672549_1920.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1{
+    color: black;
+    font-size: 80px;
+    margin-top: -20px;
+    position: relative;
+    text-align: center;
+}
+
+h2{
+    color: #821625;
+}
+
+a{
+    outline: none;
+    text-decoration: none;
+    color: #821625;
+}
+
+p{
+    outline: none;
+    text-decoration: none;
+}
+
+main {
+    font-size: 20px;
+}
+
+hr{
+    color: #821625;
+    height: 2px;
+    background-color: #821625;
+    border-radius: 5px;
+}
+
+nav button,
+#lw-btn,
+input[type="submit"]{
+    padding: 10px 30px;
+    margin-bottom: 15px;
+    background-color: #821625;
+    border: 1px solid #821625;
+    color: white;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+@media only screen and (max-width: 1195px)
+{
+    h1{
+        font-size: 60px;
+    }
+
+}
+
+@media only screen and (max-width: 610px)
+{
+    h1{
+        font-size: 50px;
+    }
+
+    nav button{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+}
+
+@media only screen and (max-width: 530px)
+{
+    h1{
+        font-size: 30px;
+    }
+
+}
+
+.menu{
+    background-color: #821625;
+    padding: 10px;
+}
+
+#menu1{
+    position: absolute;
+    padding: 0.5em;
+    max-width: 15em;
+    border-radius: 0.5rem;
+    background-color: #821625;
+    min-width: 4em;
+    color: white;
+    outline: none;
+}
+
+#menu1 > a{
+    display: block;
+    color: white;
+    outline: none;
+    margin: 10px 0;
+}
+
+#menu12{
+    border: 0;
+    outline: none;
+    background-color: #821625;
+    color: white;
+}
+
+#menu12:hover,
+#menu1 > a:hover{
+    text-decoration: none;
+    color: white;
+    background-color: #560f19;
+    outline: none;
+}
+
+.hidden{
+    display: none;
+}
+
+.shown{
+    display: block;
+}
+
+footer{
+    border-top: 2px solid #821625;
+}
+
+/*
+-----------FORMULAR------------
+ */
+
+fieldset{
+    border: 2px solid #821625;
+}
+
+label{
+    display: inline-block;
+    width: 160px;
+}
+
+input[type="text"]{
+    display: inline-block;
+    width: 400px;
+}
+
+.filter{
+    margin-bottom: 8px;
+}
+
+.submit{
+    display: inline-block;
+    margin-top: 20px;
+}
+

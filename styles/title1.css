@@ -1,0 +1,19 @@
+.title-container {
+    background-image: url("../img/life_purpose.jpeg");
+    min-height: 50%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+}
+
+h1{
+    color: whitesmoke;
+    font-size: 5vw;
+    text-align: center;
+    font-family: 'Nobile', sans-serif;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    text-shadow: grey;
+}

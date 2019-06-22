@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+/* Style the body */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+    padding: 80px;
+    text-align: center;
+    background-image: url("../img/blond-1866951_1920.jpg");
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+    font-size: 80px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+    overflow: hidden;
+    background-color: white;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+    float: left;
+    display: block;
+    color: #821625;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+    float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    background-color: #560f19;
+    color: white;
+}
+
+/* Active/current link */
+.navbar a.active {
+    background-color: #821625;
+    color: white;
+}
+
+/* Column container */
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.sidebar{
+    z-index: -1;
+    margin-bottom: 60px;
+}
+
+.quote{
+    padding-bottom: 50px;
+    font-size: 20px;
+}
+
+/* Main column */
+.main {
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+.article-info time{
+    margin-right: 15px;
+}
+
+.article-info a{
+    text-decoration: none;
+    color: black;
+}
+
+p{
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.list{
+    width: 100%;
+    display: inline-block;
+    background-color: grey;
+    padding: 30px;
+    margin: 30px 15px 30px 0;
+    border-color: #151515;
+    border-radius: 8px;
+    color: white;
+}
+
+.list ol{
+    list-style-type: disc;
+    line-height: 30px;
+}
+
+.image{
+    width: 100%;
+    margin: 10px 0;
+    opacity: 0.8;
+}
+
+.parallax{
+    background-attachment: fixed;
+}
+
+.responsive{
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .side{
+        display: none;
+    }
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+
+    .navbar a {
+        float: none;
+        width: 100%;
+    }
+}
+
+footer{
+    height: 120px;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+    background-color: #821625;
+}
+
+.copyright{
+    padding-top: 20px;
+    color: white;
+}

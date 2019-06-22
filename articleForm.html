@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulár článku / Article Form</title>
+    <link rel="stylesheet" href="styles/normalize.css" media="screen" />
+    <link rel="stylesheet" href="styles/grid.css">
+    <link rel="stylesheet" href="styles/formular.css" media="screen">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/breadcrumb.css">
+
+    <script src="/js/loadEvent.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script>window.Mustache || document.write('<script src="js/mustache.min.js"><\/script>')</script>
+
+    <script src="js/settings.js"></script>
+
+    <script src="js/messages.js"></script>
+    <script src="js/ajaxCalls.js"></script>
+    <script src="js/mustacheRenderer.js"></script>
+    <script src="js/queryStringProcessing.js"></script>
+    <script src="js/formProcessing.js"></script>
+
+    <script src="js/articleForm.js"></script>
+
+</head>
+<body>
+
+<div class="wrapper">
+    <header>
+        <nav>
+            <div class="menu-icon">
+                <i class="fa fa-bars fa-2x"></i>
+            </div>
+            <div class="logo">
+                <img class="img-logo" src="img/logo.png" alt="LifeLifter">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="articleForm.html">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+</div>
+
+<main>
+    <!--
+    Keďže vo funkcii, ktorá formulár spracuváva bude volaním funkcie
+    preventDefault() na udalosť submit
+    zrušené pôvodné správanie, je jedno čo dát do atribútov method a action.
+
+    Alternatívne možno atribúty úplne vynechať. To však môže spôsobiť problém pri posielaní údajov metódou GET, keďže sa tak stránka
+    stáva zraniteľnou voči určitým útokom ( iframe clickjacking attacks), viď.
+    http://blog.andlabs.org/2010/03/bypassing-csrf-protections-with.html
+
+    Ja som tu dal ako action badProcessing.html, čo je stránka s chybovým hlásením.
+    Indikuje, že je problém s javascript-om a údaje neboli odoslané.
+
+    -->
+
+    <section id="contact" class="section-form">
+
+        <div class="row">
+
+            <h2 id="frmTitle">Add / edit an article</h2>
+
+        </div>
+
+        <div class="row">
+
+            <form id="SKorFrm" method="post" action="badProcessing.html">
+
+                <fieldset class="author-form">
+
+                    <div class="row">
+
+                        <h3>Author</h3>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col span-1-of-3">
+
+                            <label for="author">Author</label>
+
+                        </div>
+
+                        <div class="col span-2-of-3">
+
+                            <input type="text" name="author" id="author" size="50" title="Article author, max. length 100 characters" maxlength="100" placeholder="e.g. John Newmann" />
+
+                        </div>
+
+                    </div>
+
+                </fieldset>
+
+                <fieldset class="article-form">
+
+                    <div class="row">
+
+                        <h3>Article</h3>
+
+                    </div>
+
+                    <div class="title row">
+
+                        <div class="col span-1-of-3">
+
+                            <label for="title">Title</label>
+
+                        </div>
+
+                        <div class="col span-2-of-3">
+
+                            <input type="text" name="title" id="title" size="50"  maxlength="100" pattern="\S[\S\s]*" required title="Article title, mandatory item, max. length: 100 characters, the first character must not be a space" placeholder="e.g. Improve yourself" />
+
+                        </div>
+
+                    </div>
+
+                    <div class="imgURL row">
+
+                        <div class="col span-1-of-3">
+
+                            <label for="imageLink">Image url</label>
+
+                        </div>
+
+                        <div class="col span-1-of-3">
+
+                            <input type="url" name="imageLink" id="imageLink" size="50" title="Image URL, max. length 100 characters" maxlength="100"/>
+
+                        </div>
+
+                        <div class="col span-1-of-3">
+
+                            <label></label><button type="button" id="btShowFileUpload">Upload image</button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <h3>Image Upload</h3>
+
+                        <fieldset class="added skryty" id="fsetFileUpload">
+
+                            <div class="row">
+
+                                <div class="col span-1-of-3">
+
+                                    <input type="file" id="flElm" name="file" accept="image/jpeg, image/png"/>
+
+                                </div>
+
+                                <div class="col span-1-of-3">
+
+                                    <button type="button" id="btFileUpload">Send image to server</button>
+
+                                </div>
+
+                                <div class="col span-1-of-3">
+
+                                    <button type="button" id="btCancelFileUpload">Cancel uploading</button>
+
+                                </div>
+
+                            </div>
+
+                        </fieldset>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col span-1-of-3">
+
+                            <label for="content">Content</label>
+
+                        </div>
+
+                        <div class="col span-2-of-3">
+
+                            <textarea name="content" id="content" spellcheck="true" lang="sk" required title="Article content, mandatory item, can be plain text or in HTML"></textarea>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col span-1-of-3">
+
+                            <label for="tags">Tags</label>
+
+                        </div>
+
+                        <div class="col span-2-of-3">
+
+                            <input type="text" name="tags" id="tags" size="50" title="Keyword list, comma separated" placeholder="e.g. Self-improvement" />
+
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="button col span-1-of-3">
+
+                            <button type="button" id="btBack">
+                                Back
+                            </button>
+
+                        </div>
+
+                        <div class="button col span-1-of-3">
+
+                            <button type="reset" id="reset">
+                                Reset
+                            </button>
+
+                        </div>
+
+                        <div class="button col span-1-of-3">
+
+                            <button type="submit" id="submit">
+                                Save
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </fieldset>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+</main>
+
+</body>
+</html>

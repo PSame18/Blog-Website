@@ -1,0 +1,101 @@
+.wrapper{
+    width: 100%;
+    background-color: white;
+    height: 70px;
+}
+
+.logo{
+    position: fixed;
+    float: left;
+    margin: -5px 36px;
+    color: #821625;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.img-logo{
+    width: 80px;
+}
+
+nav{
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+
+nav ul{
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: #821625;
+    padding-right: 40px;
+    text-align: right;
+    margin: 0;
+    transition: 1s;
+}
+
+nav.black ul{
+    background: white;
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 25px 40px 25px 0;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #821625;
+    font-size: 20px;
+}
+
+.menu-icon{
+    width: 100%;
+    background: white;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    cursor: pointer;
+    color: #821625;
+    display: none;
+}
+
+@media(max-width: 750px) {
+
+    .logo{
+        position: fixed;
+        top: 0;
+        margin-top: 16px;
+    }
+
+    .img-logo{
+        margin-top: -20px;
+    }
+
+    nav ul{
+        max-height: 0px;
+        background: white;
+    }
+
+    nav.black ul{
+        background: white;
+    }
+
+    .showing{
+        max-height: 20em;
+    }
+
+    nav ul li{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px 0;
+        text-align: center;
+    }
+
+    .menu-icon{
+        display: block;
+    }
+}
