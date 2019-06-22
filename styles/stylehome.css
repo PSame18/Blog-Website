@@ -181,7 +181,7 @@ input[type="submit"]:active{
 /*----------------------------------------------------*/
 
 header{
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../img/light-bulb-1246043.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../images/header-bg-img.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -626,5 +626,3 @@ footer{
     padding-top: 20px;
     color: white;
 }
-
-
