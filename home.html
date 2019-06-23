@@ -8,37 +8,37 @@
 
     <title>Life Lifter</title>
 
-    <!-- Local CSS Files -->
-    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
-    <!-- <link rel="stylesheet" type="text/css" href="styles/stylehome.css"> -->
-    <link rel="stylesheet" type="text/css" href="styles/homeStyle.css">
-
     <!-- External CSS Files -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet"> <!-- font-family: 'Lato', sans-serif; -->
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <!-- Local Javascript Files -->
     <script src="js/loadEvent.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/jquery.js"></script>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Local CSS Files -->
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <!-- <link rel="stylesheet" type="text/css" href="styles/stylehome.css"> -->
+    <link rel="stylesheet" type="text/css" href="styles/homeStyle.css">
 
 </head>
 
 <body>
 
-    <header id="home">
-        <div class="container-fluid">
+    <section id="home">
 
-            <!-- TODO: Make Navbar transparent, after scroll white -->
+        <div class="navbar-div container-fluid">
+
             <!-- TODO: Make Life Lifter logo -->
 
-            <nav class="navbar navbar-expand-lg fixed-top justify-content-between navbar-light bg-light">
-                <a class="nav-link disabled" href="#">Life Lifter
+            <nav class="navbar navbar-expand-lg fixed-top justify-content-between">
+                <a class="logo nav-link" href="#">Life Lifter
                     <!-- <img src="img/logo.png" width="30" height="30" alt="LifeLifter"> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,30 +68,20 @@
 
         <!-- TODO: Edit header to be responsive -->
         <!-- TODO: Edit text font, weight, size, height, color -->
-        <!-- TODO: Create Bootstrap buttons -->
-        <div class="hero-text-box col span-2-of-4">
 
-            <h1 class="display-1">Life Lifter</h1>
+        <div class="jumbotron">
 
-            <div class="buttons">
+            <div class="container col-lg-8 col-md-12">
 
-                <div class="header-btn">
-
-                    <a class="btn btn-full" href="#about">Show me more</a>
-
-                </div>
-
-                <div class="header-btn">
-
-                    <a class="btn btn-ghost" href="#articles">Articles</a>
-
-                </div>
+                <h1 class="header-heading">LIFE LIFTER</h1>
+                <button class="first-btn btn btn-lg btn-block" onclick="this.blur();">Features</button>
+                <button class="second-btn btn btn-lg btn-block" onclick="this.blur();">Articles</button>
 
             </div>
 
         </div>
 
-    </header>
+    </section>
 
     <section id="about" class="section-about-blog">
 

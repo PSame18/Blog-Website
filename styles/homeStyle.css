@@ -15,24 +15,126 @@ body
 }
 
 /**********/
+/* NAVBAR */
+/**********/
+
+nav
+{
+    background: rgba(0,0,0,0);
+    text-decoration: none;
+}
+
+nav ul
+{
+    margin-right: 25px;
+}
+
+nav ul li
+{
+    margin: 0 10px;
+}
+
+nav a
+{
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+}
+
+nav a:hover
+{
+    color: #ca3e47;
+    font-weight: 600;
+}
+
+.black
+{
+    background-color: white;
+    transition: background-color 200ms linear;
+}
+
+.black a
+{
+    color: #ca3e47;
+}
+
+.black a:hover
+{
+    font-weight: 600;
+}
+
+/* .logo
+{
+    padding-left: 50px;
+} */
+
+/**********/
 /* HEADER */
 /**********/
 
-header
+/* #home
 {
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../images/header-bg-img.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 100vh;
+} */
+
+.jumbotron
+{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../images/seaside.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
 }
 
-.hero-text-box{
-    position: absolute;
-    width: 80%;
-    padding: 0 7vw;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    margin: 0 10px;
+.header-heading
+{
+    font-size: 6rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+
+    .header-heading
+    {
+        font-size: 4rem;
+    }
+
+}
+
+.first-btn
+{
+    background-color: #ca3e47;
+    color: white;
+    border-radius: 50px;
+    margin: 15px;
+    outline: none;
+}
+
+.first-btn:hover,
+.first-btn:focus
+{
+    background-color: #B3252F;
+    outline: none;
+}
+
+.second-btn
+{
+    border: 2px solid;
+    border-color: #ca3e47;
+    background-color: inherit;
+    color: #ca3e47;
+    border-radius: 50px;
+    margin: 15px;
+}
+
+.second-btn:hover
+{
+    border-color: #B3252F;
+    background-color: #B3252F;
+    color: white;
 }
