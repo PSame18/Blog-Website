@@ -24,14 +24,34 @@ nav
     text-decoration: none;
 }
 
-nav ul
+@media (max-width: 991px)
 {
-    margin-right: 25px;
+    nav
+    {
+        background-color: white;
+    }
+
+    nav a
+    {
+        color: #ca3e47 !important;
+    }
+
+    .navbar-btn
+    {
+        color: #ca3e47 !important;
+    }
+
 }
 
 nav ul li
 {
     margin: 0 10px;
+}
+
+nav ul li a
+{
+    text-align: center;
+    margin: 0 auto;
 }
 
 nav a
@@ -63,22 +83,19 @@ nav a:hover
     font-weight: 600;
 }
 
-/* .logo
+.navbar-btn
 {
-    padding-left: 50px;
-} */
+    color: white;
+}
+
+.black .navbar-btn
+{
+    color: #ca3e47;
+}
 
 /**********/
 /* HEADER */
 /**********/
-
-/* #home
-{
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../images/header-bg-img.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-} */
 
 .jumbotron
 {
@@ -104,6 +121,20 @@ nav a:hover
         font-size: 4rem;
     }
 
+}
+
+.btn-div
+{
+    display: flex;
+    align-items: center; /* vertical */
+    justify-content: center; /* horizontal */
+}
+
+.btn
+{
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
 }
 
 .first-btn
