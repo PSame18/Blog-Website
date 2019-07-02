@@ -1,0 +1,402 @@
+/*********/
+/* BASIC */
+/*********/
+
+html,
+body
+{
+    background-color: white;
+    color: #555555;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.center
+{
+    text-align: center;
+    justify-content: center;
+}
+
+.padding
+{
+    padding: 20px;
+}
+
+.red
+{
+    color: #ca3e47;
+}
+
+/**********/
+/* NAVBAR */
+/**********/
+
+nav
+{
+    background: rgba(0,0,0,0);
+    text-decoration: none;
+}
+
+@media (max-width: 991px)
+{
+    nav
+    {
+        background-color: white;
+    }
+
+    nav a
+    {
+        color: #ca3e47 !important;
+    }
+
+    .navbar-btn
+    {
+        color: #ca3e47 !important;
+    }
+
+}
+
+nav ul li
+{
+    margin: 0 10px;
+}
+
+nav ul li a
+{
+    text-align: center;
+    margin: 0 auto;
+}
+
+nav a
+{
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+}
+
+nav a:hover
+{
+    color: #ca3e47;
+    font-weight: 600;
+}
+
+.black
+{
+    background-color: white;
+    transition: background-color 200ms linear;
+}
+
+.black a
+{
+    color: #ca3e47;
+}
+
+.black a:hover
+{
+    font-weight: 600;
+}
+
+.navbar-btn
+{
+    color: white;
+}
+
+.black .navbar-btn
+{
+    color: #ca3e47;
+}
+
+/**********/
+/* HEADER */
+/**********/
+
+.jumbotron
+{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../images/seaside.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    height: 100vh;
+}
+
+.header-heading
+{
+    font-size: 6rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+
+    .header-heading
+    {
+        font-size: 4rem;
+    }
+
+}
+
+.btn-div
+{
+    display: flex;
+    align-items: center; /* vertical */
+    justify-content: center; /* horizontal */
+}
+
+.btn
+{
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.first-btn
+{
+    background-color: #ca3e47;
+    color: white;
+    border-radius: 50px;
+    margin: 15px;
+    outline: none;
+}
+
+.first-btn:hover,
+.first-btn:focus
+{
+    background-color: #B3252F;
+    outline: none;
+}
+
+.second-btn
+{
+    border: 2px solid;
+    border-color: #ca3e47;
+    background-color: inherit;
+    color: #ca3e47;
+    border-radius: 50px;
+    margin: 15px;
+}
+
+.second-btn:hover
+{
+    border-color: #B3252F;
+    background-color: #B3252F;
+    color: white;
+}
+
+/*****************/
+/* ABOUT SECTION */
+/*****************/
+
+i
+{
+    font-size: 40px;
+    color: #B3252F;
+}
+
+.about-heading
+{
+    color: #B3252F;
+}
+
+/************************/
+/* TESTIMONIALS SECTION */
+/************************/
+
+#testimonials i
+{
+    color: white;
+}
+
+.section-testimonials
+{
+    background-color: #B3252F;
+    color: white;
+    text-align: center;
+}
+
+.testimonials-heading
+{
+    padding: 20px 0 0 0;
+}
+
+.customer-img
+{
+    width: 10%;
+    border-radius: 100%;
+    margin: 20px;
+}
+
+.carousel-item
+{
+    padding: 7% 17%;
+}
+
+@media (max-width: 450px)
+{
+    #testimonials h2
+    {
+        font-size: 24px;
+    }
+
+    #testimonials h3
+    {
+        font-size: 20px;
+    }
+}
+
+/********************/
+/* ARTICLES SECTION */
+/********************/
+
+#articles
+{
+    background-color: #f2f6f5;
+}
+
+#articles img
+{
+    width: 100%;
+}
+
+/******************/
+/* AUTHOR SECTION */
+/******************/
+
+#author
+{
+    background-color: #B3252F;
+}
+
+#author h2
+{
+    color: white;
+}
+
+.author-card
+{
+    background-color: white;
+    border: 1px solid #B3252F;
+}
+
+#author i
+{
+    padding: 0 20px;
+}
+
+.block
+{
+    display: inline-block;
+    width: 100%;
+    justify-content: center;
+}
+
+.block p
+{
+    margin: 0;
+    padding: 0;
+}
+
+.customer-message
+{
+    border: 1px solid #B3252F;
+    border-radius: 10px;
+    background-color: #B3252F;
+    color: white;
+    position: relative;
+    display: inline-block;
+    float: right;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.my-message
+{
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: grey;
+    color: white;
+    position: relative;
+    display: inline-block;
+    float: left;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.chat-header
+{
+    border-bottom: 1px solid black;
+    text-align: left;
+    margin: 10px;
+    padding: 10px;
+}
+
+.chat-profile-img
+{
+    width: 10%;
+    border-radius: 100%;
+}
+
+.chat-name
+{
+    margin: 10px 20px;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.chat-name p
+{
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.menu
+{
+    border-top: 1px solid black;
+}
+
+.send-text
+{
+    text-align: left;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.send-icon
+{
+    float: right;
+    text-align: right;
+    justify-content: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.send-message
+{
+    border: none;
+    width: 100%;
+}
+
+.send-message::placeholder
+{
+    color: #B3252F;
+}
+
+.send-btn
+{
+    border: none;
+    background-color: inherit;
+}

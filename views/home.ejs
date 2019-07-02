@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Life Lifter</title>
+
+    <!-- External CSS Files -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet"> <!-- font-family: 'Lato', sans-serif; -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Local Javascript Files -->
+    <script src="public/js/loadEvent.js"></script>
+    <script src="public/js/navbar.js"></script>
+    <script src="public/js/jquery.js"></script>
+
+    <!-- Local CSS Files -->
+    <link rel="stylesheet" type="text/css" href="/styles/normalize.css">
+    <!-- <link rel="stylesheet" type="text/css" href="styles/stylehome.css"> -->
+    <link rel="stylesheet" type="text/css" href="/styles/homeStyle.css">
+
+</head>
+
+<body>
+
+    <section id="home">
+
+        <div class="navbar-div container-fluid">
+
+            <!-- TODO: Make Life Lifter logo -->
+
+            <nav class="navbar navbar-expand-lg fixed-top">
+                <a class="logo nav-link" href="#">Life Lifter
+                    <!-- <img src="/img/logo.png" width="30" height="30" alt="LifeLifter"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-btn fas fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse pull-right" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#articles">Articles</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#author">About me</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="jumbotron">
+
+            <div class="header-text container col-lg-8 col-md-12">
+
+                <h1 class="header-heading">LIFE LIFTER</h1>
+                <div class="btn-div row">
+                    <button class="first-btn btn btn-lg btn-block" onclick="this.blur();">Features</button>
+                </div>
+                <div class="btn-div row">
+                    <button class="second-btn btn btn-lg btn-block" onclick="this.blur();">Articles</button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="about" class="section-about-blog">
+
+        <div class="container-fluid">
+
+            <div class="container marketing">
+
+                <div class="row center padding">
+
+                    <h2 class="about-heading">ABOUT LIFE LIFTER</h2>
+                    <p class="long-copy">
+                        Hello, it's Life Lifter, your new guru for lifestyle, motivation, productivity and lots of more.
+                        It's a new, revolutionary way of providing advice and assistance.
+                        Let's see my key features.
+                    </p>
+
+                </div>
+
+                <div class="row center padding">
+
+                    <div class="col-lg-3">
+
+                        <i class="icon ion-md-cash icon-big"></i>
+                        <h3 class="about-heading">Totally free</h3>
+                        <p>All features of Life Lifter are free. No further payments are required.</p>
+
+                    </div>
+
+                    <div class="col-lg-3">
+
+                        <i class="icon ion-md-contact icon-big"></i>
+                        <h3 class="about-heading">Personalized</h3>
+                        <p>Just type what you feel, what's your problem and Life Lifter will find you best articles.</p>
+
+                    </div>
+
+                    <div class="col-lg-3">
+
+                        <i class="icon ion-md-stats icon-big"></i>
+                        <h3 class="about-heading">Profi articles</h3>
+                        <p>The content of articles is written according to psychological studies.</p>
+
+                    </div>
+
+                    <div class="col-lg-3">
+
+                        <i class="icon ion-md-phone-portrait icon-big"></i>
+                        <h3 class="about-heading">Always with you</h3>
+                        <p>Life Lifter also available for smartphones.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TODO: TESTIMONIALS -->
+
+    <section id="testimonials" class="section-testimonials">
+
+        <div class="container-fluid">
+
+            <div class="testimonials-heading center">
+                <h2>WHAT OTHERS SAY ABOUT LIFE LIFTER</h2>
+            </div>
+
+            <div class="container container-fluid">
+
+                <div id="carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel" data-slide-to="1"></li>
+                        <li data-target="#carousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <h3>
+                                "I did not expect such quality of articles. They helped me in many ways to make the right thing.
+                                And the amount and variety of articles is just amazing. I really like how Life Lifter works."
+                            </h3>
+                            <img class="customer-img" src="/images/customer1.jpg" alt="">
+                            <em>Alberto Duncan</em>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>
+                                "I was searching a lot for website like this. Every article is unique and so helpful.
+                                Moreover, the page is easy to navigate and user friendly, so I can easily find, what I need."
+                            </h3>
+                            <img class="customer-img" src="/images/customer2.jpg" alt="">
+                            <em>Joana Silva</em>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>
+                                "As a student, I need to be productive and always motivated.
+                                Life Lifter help me a lot. Not only to find my priorities.
+                                It just changed my whole lifestyle. Absolutely perfect."
+                            </h3>
+                            <img class="customer-img" src="/images/customer3.jpg" alt="">
+                            <em>Milton Chapman</em>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TODO: ARTICLES -->
+
+    <section id="articles" class="section-articles">
+
+        <div class="center padding">
+            <h2 class="red">CHECK OUR NEWEST ARTICLE</h2>
+        </div>
+
+        <div class="album py-5">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img src="/images/success.jpg" alt="">
+                            <div class="card-body">
+                                <time datetime="2019-02-24">24. February 2019</time>
+                                <p>Patrik Schwartz</p>
+                                <p>#Career</p>
+                                <h4 class="red">5 Essential Skills to Success</h4>
+                                <p class="card-text">
+                                    There are many people who don't have the courage to launch a business in a niche as they think
+                                    they don't have the right skills and experience to obtain success.
+                                    While there are specific skills which determine the success in every niche,
+                                    there are also some general skills which ensure success in any business you would try.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-danger">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-danger">Remind</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img src="/images/discipline.jpg" alt="">
+                            <div class="card-body">
+                                <time datetime="2019-02-24">24. February 2019</time>
+                                <p>Patrik Schwartz</p>
+                                <p>#Self Motivation</p>
+                                <h4 class="red">Master of Self-Discipline</h4>
+                                <p class="card-text">
+                                    It may be hard to believe when you're facing a hot-fudge sunday or the prospect of sleeping in versus hitting the gym,
+                                    but studies show that people with self-discipline are happier.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-danger">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-danger">Remind</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img src="/images/happiness.jpg" alt="">
+                            <div class="card-body">
+                                <time datetime="2019-02-24">24. February 2019</time>
+                                <p>Patrik Schwartz</p>
+                                <p>#Introspection</p>
+                                <h4 class="red">There Is More to Life Than</h4>
+                                <p class="card-text">
+                                    So again, look at the statement "There is more to life than ________."
+                                    Have you answered it meaningfully? Now you wondering how to take the first step
+                                    to figuring out what your true purpose is in life.
+                                    Everything that you can do and accomplish in life are bounded by 7 Cornerstone Skills.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-danger">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-danger">Remind</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- <div class="row articles-btn">
+
+            <a class="addArticle btn btn-full" href="articleForm.html">Add an article</a>
+
+        </div> -->
+
+
+    </section>
+
+    <section id="author" class="section-author">
+
+        <div class="row center padding">
+
+            <h2>ABOUT ME</h2>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-10 container">
+
+                <div class="author-card row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+
+                    <div class="container">
+
+                        <div class="block">
+                            <div class="chat-header row">
+                                <div class="col">
+                                    <img class="chat-profile-img" src="/images/author-img.jpg" alt="">
+                                </div>
+                                <div class="col chat-name">
+                                    <p class="">Patrik Schwartz</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block">
+                            <div class="customer-message">
+                                <p>Hi. Who are you?</p>
+                            </div>
+                        </div>
+
+                        <div class="block">
+                            <div class="my-message">
+                                <p>Hi &#128515;</p>
+                            </div>
+                        </div>
+
+                        <div class="block">
+                            <div class="my-message">
+                                <p> I am a young student who wants the skills, knowledge, and experience gained from my previous studies and work, to use to create new innovative projects.
+                                    I am convinced that technology should not only solve human problems but also raise human life to the full potential it has. Therefore, I would like to participate in such projects in the future.</p>
+                            </div>
+                        </div>
+
+                        <div class="block">
+                            <div class="my-message">
+                                <p>Do you wanna see more?</p>
+                            </div>
+                        </div>
+
+                        <div class="block">
+                            <div class="customer-message">
+                                <p>Yeah, sure.</p>
+                            </div>
+                        </div>
+
+                        <% for(var i = 0; i < chat.length; i++) { %>
+                        <div class="block">
+                            <div class="customer-message">
+                                <p> <%= chat[i] %> </p>
+                            </div>
+                        </div>
+                        <% } %>
+
+                        <div class="block">
+
+                            <form class="" action="/" method="post">
+                                <div class="menu row">
+                                    <div class="col send-text">
+                                        <input class="send-message red" name="message" placeholder="Write text...">
+                                    </div>
+                                    <div class="col send-icon">
+                                        <button class="send-btn" type="submit" name="button"><i class="fas fa-paper-plane red"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- <div class="center padding">
+
+                            <h3 class="mb-0 red">Patrik Schwartz</h3>
+                            <br>
+                            <p>Hi. I am a young student who wants the skills, knowledge, and experience gained from my previous studies and work, to use to create new innovative projects.
+                                I am convinced that technology should not only solve human problems but also raise human life to the full potential it has. Therefore, I would like to participate in such projects in the future.
+                            </p>
+
+                            <div class="author-icons center row">
+                                <div class="col-lg-3 col-md-6">
+                                    <i class="fab fa-facebook icon-small"></i>
+                                </div>
+                                <div class="col-lg-3  col-md-6">
+                                    <i class="fab fa-instagram icon-small"></i>
+                                </div>
+                                <div class="col-lg-3  col-md-6">
+                                    <i class="fab fa-twitter icon-small"></i>
+                                </div>
+                                <div class="col-lg-3  col-md-6">
+                                    <i class="fab fa-linkedin icon-small"></i>
+                                </div>
+
+                            </div>
+
+                        </div> -->
+
+            </div>
+
+        </div>
+
+        </div>
+
+    </section>
+
+    <section id="contact" class="section-form">
+
+        <div class="row">
+
+            <h2>Contact me</h2>
+
+        </div>
+
+        <div class="row">
+
+            <form method="post" action="#" class="contact-form">
+
+                <div class="row">
+
+                    <div class="col span-1-of-3">
+
+                        <label for="name">Name</label>
+
+                    </div>
+
+                    <div class="col span-2-of-3">
+
+                        <input type="text" name="name" id="name" placeholder="Your name" required>
+
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col span-1-of-3">
+
+                        <label for="mail">Email</label>
+
+                    </div>
+
+                    <div class="col span-2-of-3">
+
+                        <input type="email" name="email" id="mail" placeholder="Your email" required>
+
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col span-1-of-3">
+
+                        <label for="find">How did you find Life Lifter?</label>
+
+                    </div>
+
+                    <div class="col span-2-of-3">
+
+                        <select name="find" id="find">
+
+                            <option value="friends">Friends</option>
+                            <option value="search">Search engine</option>
+                            <option value="ad">Advertisement</option>
+                            <option value="other">Other</option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col span-1-of-3">
+
+                        <label for="news">Newsletter</label>
+
+                    </div>
+
+                    <div class="col span-2-of-3">
+
+                        <input type="checkbox" name="news" id="news" checked> Yes, please
+
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col span-1-of-3">
+
+                        <label for="message">Drop us a line</label>
+
+                    </div>
+
+                    <div class="col span-2-of-3">
+
+                        <textarea name="message" id="message" placeholder="Your message"></textarea>
+
+                    </div>
+
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col span-1-of-3">
+
+                        <label for="submit">&nbsp;</label>
+
+                    </div>
+
+                    <div class="col span-2-of-3">
+
+                        <input type="submit" id="submit" value="Send it!">
+
+                    </div>
+
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <div class="copyright">
+            <details>
+                <summary>Copyright 2019.</summary>
+                <p> - by Patrik Schwartz. All Rights Reserved.</p>
+                <p>All content and graphics on this web site are the property of Patrik Schwartz.</p>
+            </details>
+        </div>
+
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
