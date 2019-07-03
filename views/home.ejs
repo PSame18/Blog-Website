@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Local Javascript Files -->
-    <script src="public/js/loadEvent.js"></script>
-    <script src="public/js/navbar.js"></script>
-    <script src="public/js/jquery.js"></script>
+    <script src="/js/loadEvent.js"></script>
+    <script src="/js/navbar.js"></script>
+    <script src="/js/jquery.js"></script>
 
     <!-- Local CSS Files -->
     <link rel="stylesheet" type="text/css" href="/styles/normalize.css">
@@ -155,36 +155,42 @@
             <div class="container container-fluid">
 
                 <div id="carousel" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
+                    <!-- <ol class="carousel-indicators">
                         <li data-target="#carousel" data-slide-to="0" class="active"></li>
                         <li data-target="#carousel" data-slide-to="1"></li>
                         <li data-target="#carousel" data-slide-to="2"></li>
-                    </ol>
+                    </ol> -->
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <h3>
+                            <h3 class="testimony-text">
                                 "I did not expect such quality of articles. They helped me in many ways to make the right thing.
                                 And the amount and variety of articles is just amazing. I really like how Life Lifter works."
                             </h3>
-                            <img class="customer-img" src="/images/customer1.jpg" alt="">
-                            <em>Alberto Duncan</em>
+                            <!-- <img class="customer-img" src="/images/customer1.jpg" alt=""> -->
+                            <div class="padding">
+                                <em>Alberto Duncan</em>
+                            </div>
                         </div>
                         <div class="carousel-item">
-                            <h3>
+                            <h3 class="testimony-text">
                                 "I was searching a lot for website like this. Every article is unique and so helpful.
                                 Moreover, the page is easy to navigate and user friendly, so I can easily find, what I need."
                             </h3>
-                            <img class="customer-img" src="/images/customer2.jpg" alt="">
-                            <em>Joana Silva</em>
+                            <!-- <img class="customer-img" src="/images/customer2.jpg" alt=""> -->
+                            <div class="padding">
+                                <em>Joana Silva</em>
+                            </div>
                         </div>
                         <div class="carousel-item">
-                            <h3>
+                            <h3 class="testimony-text">
                                 "As a student, I need to be productive and always motivated.
                                 Life Lifter help me a lot. Not only to find my priorities.
                                 It just changed my whole lifestyle. Absolutely perfect."
                             </h3>
-                            <img class="customer-img" src="/images/customer3.jpg" alt="">
-                            <em>Milton Chapman</em>
+                            <!-- <img class="customer-img" src="/images/customer3.jpg" alt=""> -->
+                            <div class="padding">
+                                <em>Milton Chapman</em>
+                            </div>
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
@@ -322,9 +328,7 @@
                             <div class="chat-header row">
                                 <div class="col">
                                     <img class="chat-profile-img" src="/images/author-img.jpg" alt="">
-                                </div>
-                                <div class="col chat-name">
-                                    <p class="">Patrik Schwartz</p>
+                                    <p class="chat-name">Patrik Schwartz</p>
                                 </div>
                             </div>
                         </div>
@@ -360,17 +364,29 @@
                             </div>
                         </div>
 
-                        <% for(var i = 0; i < chat.length; i++) { %>
+                        <div class="block">
+                            <div class="my-message">
+                                <p>Ask me anything, I'll answer somehow. &#128516; &#128516;</p>
+                            </div>
+                        </div>
+
+                        <% for(var i = 0; i < customer_chat.length; i++) { %>
                         <div class="block">
                             <div class="customer-message">
-                                <p> <%= chat[i] %> </p>
+                                <p> <%= customer_chat[i] %> </p>
+                            </div>
+                        </div>
+
+                        <div class="block">
+                            <div class="my-message">
+                                <p> <%= my_chat[i] %> </p>
                             </div>
                         </div>
                         <% } %>
 
                         <div class="block">
 
-                            <form class="" action="/" method="post">
+                            <form class="" action="#author" method="post">
                                 <div class="menu row">
                                     <div class="col send-text">
                                         <input class="send-message red" name="message" placeholder="Write text...">
@@ -381,38 +397,9 @@
                                 </div>
                             </form>
 
-
                         </div>
                     </div>
                 </div>
-
-
-
-                <!-- <div class="center padding">
-
-                            <h3 class="mb-0 red">Patrik Schwartz</h3>
-                            <br>
-                            <p>Hi. I am a young student who wants the skills, knowledge, and experience gained from my previous studies and work, to use to create new innovative projects.
-                                I am convinced that technology should not only solve human problems but also raise human life to the full potential it has. Therefore, I would like to participate in such projects in the future.
-                            </p>
-
-                            <div class="author-icons center row">
-                                <div class="col-lg-3 col-md-6">
-                                    <i class="fab fa-facebook icon-small"></i>
-                                </div>
-                                <div class="col-lg-3  col-md-6">
-                                    <i class="fab fa-instagram icon-small"></i>
-                                </div>
-                                <div class="col-lg-3  col-md-6">
-                                    <i class="fab fa-twitter icon-small"></i>
-                                </div>
-                                <div class="col-lg-3  col-md-6">
-                                    <i class="fab fa-linkedin icon-small"></i>
-                                </div>
-
-                            </div>
-
-                        </div> -->
 
             </div>
 
@@ -424,122 +411,65 @@
 
     <section id="contact" class="section-form">
 
-        <div class="row">
+        <div class="row red center padding">
 
-            <h2>Contact me</h2>
+            <h2>CONTACT ME</h2>
 
         </div>
 
-        <div class="row">
+        <div class="container center padding">
 
             <form method="post" action="#" class="contact-form">
 
-                <div class="row">
+                <div class="form">
 
-                    <div class="col span-1-of-3">
+                    <div class="label padding">
+                        <div class="left">
 
-                        <label for="name">Name</label>
+                            <label for="name">Name</label>
 
+                        </div>
+
+                        <div class="">
+
+                            <input class="input_line" type="text" name="name" id="name" required>
+
+                        </div>
                     </div>
 
-                    <div class="col span-2-of-3">
+                    <div class="label padding">
+                        <div class="left">
 
-                        <input type="text" name="name" id="name" placeholder="Your name" required>
+                            <label for="mail">Email</label>
 
+                        </div>
+
+                        <div class="">
+
+                            <input class="input_line" type="email" name="email" id="mail" required>
+
+                        </div>
                     </div>
 
+                    <div class="label padding">
+                        <div class="left">
 
-                </div>
+                            <label for="message">Drop me a line</label>
 
-                <div class="row">
+                        </div>
 
-                    <div class="col span-1-of-3">
+                        <div class="">
 
-                        <label for="mail">Email</label>
+                            <textarea class="input_line" name="message" id="message"></textarea>
 
+                        </div>
                     </div>
 
-                    <div class="col span-2-of-3">
-
-                        <input type="email" name="email" id="mail" placeholder="Your email" required>
-
+                    <div class="label padding">
+                        <div class="padding">
+                            <button class="btn btn-outline-danger" type="submit" name="button">Send</button>
+                        </div>
                     </div>
-
-
-                </div>
-
-                <div class="row">
-
-                    <div class="col span-1-of-3">
-
-                        <label for="find">How did you find Life Lifter?</label>
-
-                    </div>
-
-                    <div class="col span-2-of-3">
-
-                        <select name="find" id="find">
-
-                            <option value="friends">Friends</option>
-                            <option value="search">Search engine</option>
-                            <option value="ad">Advertisement</option>
-                            <option value="other">Other</option>
-
-                        </select>
-
-                    </div>
-
-
-                </div>
-
-                <div class="row">
-
-                    <div class="col span-1-of-3">
-
-                        <label for="news">Newsletter</label>
-
-                    </div>
-
-                    <div class="col span-2-of-3">
-
-                        <input type="checkbox" name="news" id="news" checked> Yes, please
-
-                    </div>
-
-
-                </div>
-
-                <div class="row">
-
-                    <div class="col span-1-of-3">
-
-                        <label for="message">Drop us a line</label>
-
-                    </div>
-
-                    <div class="col span-2-of-3">
-
-                        <textarea name="message" id="message" placeholder="Your message"></textarea>
-
-                    </div>
-
-
-                </div>
-
-                <div class="row">
-
-                    <div class="col span-1-of-3">
-
-                        <label for="submit">&nbsp;</label>
-
-                    </div>
-
-                    <div class="col span-2-of-3">
-
-                        <input type="submit" id="submit" value="Send it!">
-
-                    </div>
-
 
                 </div>
 
@@ -551,7 +481,26 @@
 
     <footer>
 
-        <div class="copyright">
+        <div class="center padding">
+
+            <div class="author-icons center row">
+                <div class="">
+                    <i class="fab fa-facebook icon-small"></i>
+                </div>
+                <div class="">
+                    <i class="fab fa-instagram icon-small"></i>
+                </div>
+                <div class="">
+                    <i class="fab fa-twitter icon-small"></i>
+                </div>
+                <div class="">
+                    <i class="fab fa-linkedin icon-small"></i>
+                </div>
+
+            </div>
+
+            <br>
+
             <details>
                 <summary>Copyright 2019.</summary>
                 <p> - by Patrik Schwartz. All Rights Reserved.</p>

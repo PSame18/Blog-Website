@@ -223,6 +223,16 @@ i
     padding: 20px 0 0 0;
 }
 
+#carousel em
+{
+    font-size: 18px;
+}
+
+.testimony-text
+{
+    font-weight: 100;
+}
+
 .customer-img
 {
     width: 10%;
@@ -338,28 +348,33 @@ i
 
 .chat-profile-img
 {
-    width: 10%;
+    width: 10vw;
     border-radius: 100%;
+    margin: 0 30px 0 0;
 }
 
 .chat-name
 {
-    margin: 10px 20px;
-    justify-content: center;
-    text-align: center;
-
+    display: inline-block;
+    margin: 0 20px;
+    padding: 0 20px;
+    font-size: 3vw;
 }
 
-.chat-name p
+@media (max-width: 730px)
 {
-    font-size: 20px;
-    font-weight: 900;
-    text-align: center;
-    vertical-align: middle;
-    position: absolute;
-    top: 50%;
-    left: 15%;
-    transform: translate(-50%, -50%);
+    .chat-name
+    {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 530px)
+{
+    .chat-name
+    {
+        font-size: 5.5vw;
+    }
 }
 
 .menu
@@ -399,4 +414,54 @@ i
 {
     border: none;
     background-color: inherit;
+}
+
+/**********************/
+/* CONTACT ME SECTION */
+/**********************/
+
+.label
+{
+    margin: 0 auto;
+    text-align: center;
+    display: inline;
+}
+
+.left
+{
+    text-align: left;
+}
+
+.form
+{
+    position: relative;
+}
+
+.input_line
+{
+    border: none;
+    border-bottom: 1px solid #B3252F;
+    width: 100%;
+}
+
+/**********/
+/* FOOTER */
+/**********/
+
+footer
+{
+    background-color: #B3252F;
+    color: white;
+}
+
+footer i
+{
+    color: white;
+    margin: 10px;
+    font-size: 100%;
+}
+
+footer i:hover
+{
+    color: #BFBFBF;
 }
