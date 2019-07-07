@@ -4,6 +4,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
 const open = require("open");
+const lodash = require("lodash");
+const stringShortener = require(__dirname + "/string_shorter.js");
 
 const app = express();
 
